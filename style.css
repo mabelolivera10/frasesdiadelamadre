@@ -1,0 +1,111 @@
+*{
+  box-sizing:border-box;
+}
+a {
+  display: block;
+  height: 100vh;
+  font-family: 'Pacifico', cursive;
+  color: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  outline: 0;
+  font-size: 8.5vmin;
+  text-align: center;
+  padding: 10vw;
+  position: relative;
+}
+
+a:nth-child(1) { background: #37dd87 }
+a:nth-child(2) { background: #F06292 }
+a:nth-child(3) { background: #AB47BC }
+a:nth-child(4) { background: #26C6DA }
+a:nth-child(5) { background: #8BC34A }
+a:nth-child(6) { background: #E64A19 }
+a:nth-child(7) { background: #CB0E40 }
+a:nth-child(8) { background: #936d77 }
+
+a::after {
+  content: '';
+  background: url(http://www.clker.com/cliparts/n/6/Z/t/h/h/flower-md.png) no-repeat center center;
+  background-size: contain;
+  height: 30vmin;
+  width: 30vmin;
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  margin-bottom: -15vmin;
+  margin-left: -15vmin;
+  z-index: 999;
+  animation: spin 10s linear infinite;
+} */
+
+ a:nth-child(even)::after {
+  background: url(http://www.clker.com/cliparts/n/2/M/X/a/P/purple-flower-hi.png) no-repeat center center !important;
+  background-size: contain !important;
+  animation: spin 10s linear reverse infinite !important;
+}
+
+a:nth-child(6)::after {
+  display: none;
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg) }
+  50% { transform: rotate(180deg) }
+  100% { transform: rotate(360deg) }
+}
+
+img{
+  height:100vh;
+  padding-left:3em;
+}
+
+
+
+.made-with-love {
+  position: fixed;
+  left: 0;
+  width: 100%;
+  top: 15PX; /* Cambiado de "bottom: 10px;" a "top: 0;" */
+  text-align: center;
+  font-size: 10px;
+  z-index: 9999;
+  font-family: arial;
+  color: #1e0192;
+  font-weight: 600;
+}
+.made-with-love i {
+  font-style: normal;
+  font-size: 14px;
+  position: relative;
+  top: 2px;
+}
+.made-with-love a {
+  color: #c74f2b;
+  text-decoration: none;
+
+  
+}
+.made-with-love a:hover {
+  text-decoration: underline;
+}
+.made-with-love .dribble img {
+  max-width: 100%;
+  width: 26px;
+  position: relative;
+  top: -2px;
+  vertical-align: middle;
+}
+
+.made-with-love a {
+  font-weight: bold; /* Añadiendo negrita solo a los enlaces */
+}
+
+
+img.centrada {
+  position: absolute;
+  top: 50%;
+  left: 40%;
+  transform: translate(-50%, -50%);
+}
